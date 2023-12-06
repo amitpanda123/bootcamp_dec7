@@ -106,7 +106,6 @@ def get_API_embedding(text, model="text-embedding-ada-002"):
     embedding = co.embed([text], input_type="search_document", model=model).embeddings
 
   elif model in embedding_models_HF:
-    print("YES")
     embedder = doc_embedding(model)
     embedding = embedder.embed_query(text)
 
